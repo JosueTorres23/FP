@@ -16,3 +16,5 @@
 **Negrita**
 
 _texto italica_
+
+***negrita italica***
