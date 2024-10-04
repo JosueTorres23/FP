@@ -17,4 +17,7 @@
 
 _texto italica_
 
-***negrita italica***
+***Negrita italica***
+
+![Imagen de link]
+(https://static.wikia.nocookie.net/zelda/images/1/1c/TotK_-_Link_imagen_oficial.png/revision/latest?cb=20230220223232&path-prefix=es)
