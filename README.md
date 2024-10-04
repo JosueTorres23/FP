@@ -12,3 +12,7 @@
 2. Dos
 3. Tres
 4. Cuatro
+
+**Negrita**
+
+_texto italica_
