@@ -127,5 +127,15 @@ int main() {
 	y -= 1.2;
 	cout << y << endl;
 
+
+	//13. booleano
+	cout << (a > b) << endl;
+	cout << (a < b) << endl;//A la salida 0 es falso y 1 es verdadero
+
+	cout << boolalpha; //Imprime true o false en vez de 0 y 1
+
+	cout << ((a + 15) > b);
+
+
 	return 0;
 }
