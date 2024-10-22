@@ -22,7 +22,7 @@ int main() {
 	cout << val << " -- " << 2 * val << " -- " << 3 * val << " -- " << 4 * val << " -- " << 5 * val << endl;
 	cout << endl;
 
-	//1.3 Conersión de peso
+	//1.3 Conversión de peso
 	int pesUs;
 	const double lib = 2.2;
 	cout << "Introduzca su peso para hacer la conversión a libras: ";
