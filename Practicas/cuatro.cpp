@@ -44,25 +44,23 @@ int main()
 
 		if (a>b && a>c) {
 			cout << "El valor máximo es a " << "\n\n";
-		} else if (b>a && b>c) {
-			cout << "El valor maximo es b " << "\n\n";
+		}		else if (b>a && b>c) {
+					cout << "El valor maximo es b " << "\n\n";
 		}
-		else {
-			cout << "El valor maximo es c " << "\n\n";
+			else {
+				cout << "El valor maximo es c " << "\n\n";
 		}
 
 		if (a < b && a < c) {
 			cout << "El valor minimo es a " << "\n\n";
-		}
-		else if (b > a && b > c) {
-			cout << "El valor minimo es b " << "\n\n";
-		}
-		else {
-			cout << "El valor minimo es c " << "\n\n";
+		}		else if (b > a && b > c) {
+					cout << "El valor minimo es b " << "\n\n";
+		}				else {
+							cout << "El valor minimo es c " << "\n\n";
 		}
 
 	//1.18 Ingresar la hora
-	int hh, mm, ss;
+		int hh, mm, ss, suma;
 	cout << "Ingrese la hora de este momento, cada parte será por separando " << "\n";
 	cout << "Horas: ";
 	cin >> hh;
@@ -74,8 +72,25 @@ int main()
 	cin >> ss;
 	cout << "\n";
 
-		if (a>12 || b>60 || c>60) {
-
+		if (a>24 || b>60 || c>60) 
+		{
+			cout << "El formato de horas no admite el valor ingresado, revise los datos ingresados" << "\n""\n";
 		}
+		else 
+		{
+			
+			if ((ss+1) == 60) 
+			{
+			
+				if (mm==60)
+				{
+					suma = hh + 1;
+					if (hh>24)
+					{
+						cout << "00:00:00" << "\n""\n";
+					}
+				}
+			}
+		}	
 
 }
