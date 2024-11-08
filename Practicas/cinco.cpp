@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 using namespace std;
-int main() {
+int main()
+{
 	/*1.21 Pregunta para salir del código*/
 	string respuesta;
 	do
@@ -18,47 +19,134 @@ int main() {
 
 
 	/*1.22 Menu de opciones de operaciones*/
-	int numero1, numero2;
+	int numero1, numero2, total;
+	char opcion;
 
+
+	do
+	{
+		//Menu de salida
+		cout << "Seleccione una operacion:" << endl;
+		cout << " (+) Suma" << endl;
+		cout << " (-) Resta" << endl;
+		cout << " (*) Multiplicacion" << endl;
+		cout << " (/) Division" << endl;
+		cout << " (%) Residuo" << endl;
+		cout << " (s) Salir" << endl;
+		cout << "Ingrese una opcion: ";
+		cin >> opcion;
+
+		//Valores para operación
+		if (opcion != 's') {
+			cout << "Ingrese el primer numero: ";
+			cin >> numero1;
+			cout << "Ingrese el segundo numero: ";
+			cin >> numero2;
+		}
+
+		//switch de posibles opciones
+		switch (opcion)
+		{
+		case '+':
+			total = numero1 + numero2;
+			cout << "Resultado de la suma " << total << "\n""\n";
+			break;
+
+		case '-':
+			total = numero1 - numero2;
+			cout << "Resultado de la resta " << total << "\n""\n";
+			break;
+
+		case '*':
+			total = numero1 * numero2;
+			cout << "Resultado de la multiplicacion " << total << "\n""\n";
+			break;
+
+		case '/':
+			total = numero1 / numero2;
+			cout << "Resultado de la division " << total << "\n""\n";
+			break;
+
+		case '%':
+			total = numero1 % numero2;
+			cout << "Residuo de la divison " << total << "\n""\n";
+			break;
+
+
+		default:
+			break;
+		}
+
+		//reinicio de variables
+		numero1 = 0;
+		numero2 = 0;
+		total = 0;
+
+	} while (opcion != 's');
+	cout << "\n""\n";
 
 
 	/*1.23 Cajero*/
-	float saldo=3450, retiro;
-	string contraseña,seleccion;
+	string PIN;
+	float montRet;
+	float saldo = 3450;
+	char selecion;
 
+	//Solicitud y verificación de PIN
 	do
 	{
-		cout << "Introduzca su PIN: ";
-		cin >> contraseña;
-		if (contraseña=="1234")
-		{
-			break;
-		}
-		else
-		{
-			cout << "PIN incorrecto" << "\n""\n";
-		}
-	} while (true);
+		cout << "Ingrese su PIN: ";
+		cin >> PIN;
 
+		if (PIN !="1234")
+		{
+			cout << "PIN incorrecto, intentelo nuevamente" << "\n""\n";
+		}
+	} while (PIN != "1234");
+
+	//Despliegue de menu y operaciones de banco
 	do
 	{
-		//salida de menu
-		cout << "Menu de operaciones" << "\n""\n";
+		cout << "Selecciones una opcion" << "\n";
 		cout << "a) Consulta de saldo" << "\n";
 		cout << "b) Retiro de dinero" << "\n";
-		cout << "c) Cancelar operacion" << "\n""\n";
+		cout << "c) Cancelar operacion" << "\n";
+		cout << "Opcion: ";
+		cin >> selecion;
 
-		//cin y switch
-
-		cin >> seleccion;
-
-		do
+		switch (selecion)
 		{
+		case 'a':
+			cout << "\n""\n";
+			cout << "Su saldo es de " << saldo << " pesos" << "\n""\n";
+			break;
+
+		case 'b':
+			cout << "\n""\n";
+			cout << "Ingrese la cantidad que desea retirar: ";
+			cin >> montRet;
+			if (montRet>saldo)
+			{
+				cout << "Saldo insuficiente" << "\n""\n";
+			}
+			else
+			{
+				total = saldo - montRet;
+				cout << "Retiro exitoso" << "\n";
+				cout << "Su saldo es de " << saldo << "\n""\n";
+			}
+			break;
 			
-		} while (true);
-
-	} while (seleccion=="c");
-
+		case 'c':
+			cout << "\n""\n";
+			cout << "Operación cancelada" << "\n""\n";
+			break;
+			
+		default:
+			cout << "Opcción no valida. Intentelo nuevamente" << "\n""\n";
+			break;
+		}
+	} while (selecion !='c');
 
 	/*1.24 temple run*/
 	srand(time(NULL)); //Seed
@@ -69,21 +157,21 @@ int main() {
 	{
 		//consumo
 		vida--;
-		cout << "consumo de 1 vida " <<vida<< "\n""\n";
+		cout << "consumo de 1 vida " << vida << "\n""\n";
 
-		castigo = rand()%2;
+		castigo = rand() % 2;
 		if (castigo == 1);
 		{
 			vida = vida - 3;
-			cout << "Castigo " <<vida<< "\n""\n";
+			cout << "Castigo " << vida << "\n""\n";
 		}
 		premio = rand() % 2;
-		if (premio==1)
+		if (premio == 1)
 		{
-			vida == vida + 3;
-			cout << "Premio "<<vida << "\n""\n";
+			vida = vida + 3;
+			cout << "Premio " << vida << "\n""\n";
 		}
-		cout << "Fin ciclo "<<vida << "\n""\n";
-		cout <<"================="<< "\n""\n";
+		cout << "Fin ciclo " << vida << "\n""\n";
+		cout << "=================" << "\n""\n";
 	}
 }
