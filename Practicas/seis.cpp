@@ -10,8 +10,9 @@ int main() {
 
 	for ( i = 0; i < 12; i++)
 	{
-		cout << nombreMes[i] << "\n""\n";
+		cout << nombreMes[i] << "\n";
 	}
+	cout << "\n""\n";
 
 	/*Ejercicio G - 2*/
 	cout << "Ejercicio 2 - G" << "\n""\n";
@@ -20,15 +21,15 @@ int main() {
 
 	for (j = 0; j < 12; j++)
 	{
-		cout << nombrePlaneta[j] << "\n""\n";
+		cout << nombrePlaneta[j] << "\n";
 	}
-
+	cout << "\n""\n";
 
 	//Arreglos de dos dimensiones
 	int matriz1[2][2]{ {1,2},{3,4} };
-	for (int k=0; k <= 1; k++) 
+	for (int k = 0; k <= 1; k++)
 	{
-		for (int l=0; l<=1; l++)
+		for (int l = 0; l <= 1; l++)
 		{
 			cout << matriz1[k][l] << " , ";
 		}
