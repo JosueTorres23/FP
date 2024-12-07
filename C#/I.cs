@@ -4,6 +4,7 @@ class Program
 {
     static void Main()
     {
+        /* Practica I*/
         // Declaración de la matriz 9x9 para Sudoku, con 0 en las casillas vacías
         int[,] sudoku = new int[9, 9]
         {
