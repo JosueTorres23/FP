@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        /*Practica D*/
+        /* Practica D */
         // 1.16 Elegir el numero más grande
         int A, B, C;
         Console.WriteLine("Introduzca tres numeros para comparar cual es el mayor");
