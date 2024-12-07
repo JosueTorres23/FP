@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        /*Practica B*/
+        /* Practica B */
         /* 1.1 Ejecución de operaciones */
         //Ejercicio 1.
         Console.WriteLine(3 + 5 * 2 / 2 - 1);
