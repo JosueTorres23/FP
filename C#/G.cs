@@ -4,6 +4,7 @@ class Program
 {
     static void Main()
     {
+        /* Practica G */
         // Arreglos de una dimensión
         /* Ejercicio G - 1 */
         Console.WriteLine("Ejercicio 1 - G\n");
